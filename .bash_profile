@@ -1,7 +1,7 @@
 # NVM (Node Version Manager) setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion (hitting tab to see options)
 
 # Random Emoji Generator
 random_emoji() {
@@ -25,8 +25,11 @@ set_my_prompt() {
     # Reset color so that the emoji and the directory are in bright red, but the rest of the prompt is in default color
     local reset="\[\033[0m\]" 
 
+    # Set the username to be displayed in the prompt
+    local username="XDAV"
+
     # Set the PS1 variable to include the opening statement, random emoji and the current working directory in bright red
-    export PS1="${bright_red}XDAV${reset} \n ${emoji}  ${bright_red}\w${reset} \$ "
+    export PS1="${bright_red}${username}${reset} \n ${emoji}  ${bright_red}\w${reset} \$ "
 }
 
 export PROMPT_COMMAND=set_my_prompt

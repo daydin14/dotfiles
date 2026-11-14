@@ -1,3 +1,5 @@
+![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
 # Custom Bash Profile
 
 This repository contains a personal Bash profile in [`.bash_profile`](.bash_profile). It configures NVM (Node Version Manager) when available and adds a colorful command prompt with a randomly selected emoji.
@@ -6,7 +8,7 @@ This repository contains a personal Bash profile in [`.bash_profile`](.bash_prof
 
 - Sets `NVM_DIR` to `~/.nvm` and loads NVM and its Bash completions when those files exist.
 - Defines `random_emoji`, which prints a randomly selected emoji.
-- Defines `set_my_prompt`, which sets the prompt to show `XDAV`, an emoji, the current working directory, and the shell prompt character.
+- Defines `set_my_prompt`, which sets the prompt to show `username`, an emoji, the current working directory, and the shell prompt character.
 - Runs `set_my_prompt` through `PROMPT_COMMAND`, so the prompt (including its emoji) is refreshed before each command.
 
 The NVM setup is optional: if NVM is not installed at `~/.nvm`, the profile skips loading it.
