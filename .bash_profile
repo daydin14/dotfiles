@@ -5,7 +5,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Random Emoji Generator
 random_emoji() {
-    local emojis=("🎮" "💾" "📀" "🫧" "🎉" "⭐" "🔨" "🧢" "😡" "🥸" "👺" "👻" "😸" "🙈" "🐸" "🐼" "🐻" "🐨" "🐽" "🐾" "🦧" "🦥" "🐢" "🐍" "🐉" "🦖" "🦦" "🐳" "🦑" "🦐" "🐦‍🔥" "🦚" "🐧" "🐥" "🦂" "👀" "🧙‍♂️" "🤹‍♂️" "👑" "💎" "⛳" "🎯" "🪄" "🎲" "🎰" "🧸" "🃏" "🔧" "🪛" "⚙️" "⚗️" "🧪" "🛡️" "🪦" "🪫" "🔌" "🍟" "🍿" "🥨" "🍙" "🍣" "🍦" "🍪" "🍷" "🍺" "🥝" "🍇" "🫐" "🍋" "🍋‍🟩" "🏎️" "🛸" "⛩️" "🏯" "♨️" "🌚" "🌀" "🔱" "💮")
+    local emojis=("🎮" "💾" "📀" "👻" "😸" "🐸" "🦖" "🐧" "🐥" "🧙‍♂️" "💎" "⛳" "🪄" "🧸" "🃏" "🔧" "🪛" "⚙️" "🧪" "🛡️" "🍟" "🍿" "🥨" "🍙" "🍣" "🍦" "🍪" "🥝" "🍇" "🫐" "🍋" "⛩️" "🔱" "💮")
 
     # Generate a random index to select an emoji from the array
     local rand_idx=$(( RANDOM % ${#emojis[@]} ))
@@ -59,7 +59,7 @@ set_my_prompt() {
         fi
     fi
 
-    export PS1="${username} \n ${emoji}  ${bright_red}\w${reset}${git_part} \$ "
+    export PS1="${emoji}${bright_red}・${username}:${reset} \w${git_part} \$ "
 }
 
 export PROMPT_COMMAND=set_my_prompt
